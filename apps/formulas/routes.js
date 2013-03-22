@@ -1,6 +1,10 @@
+var fs = require('fs');
+
 var routes = function(app) {
   app.get('/formulas', function(request, response) {
-    response.send('formulas');
+    fs.readdir('Library/Formula', function(err, files) {
+      response.send(files);
+    });
   });
 };
 

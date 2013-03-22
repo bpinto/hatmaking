@@ -6,6 +6,6 @@ describe('Formulas', function() {
   it('fetches all formulas', function(done) {
     request(app)
     .get('/formulas')
-    .expect('formulas', done)
+    .expect([], done)
   });
 });
